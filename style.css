@@ -1,0 +1,250 @@
+body, /* сброс отступов по-умолчанию*/
+.header, .main, .footer {
+  font-family: SF Pro Display;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100vw;
+  height: 65px;
+  background-color: #2a2f45;
+  z-index: 1000;
+}
+
+.header__logo {
+  display: block;
+  width: 194px;
+  height: 65px;
+  background: url("images/WeatherCheckLogo.svg");
+  color: white;
+}
+
+.header::after {
+  content: "";
+  visibility: hidden;
+  width: 194px;
+}
+
+.header__menu {
+  display: block;
+  height: 65px;
+  flex-grow: 2;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  max-width: 420px;
+  justify-content: stretch;
+}
+
+.menu__item {
+  display: block;
+  flex-grow: 1;
+  height: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #8a91ab;
+  white-space: nowrap;
+}
+
+.menu__item_active {
+  color: #ffffff;
+}
+
+.menu__item_icon::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 17px;
+  padding-right: 10px;
+  vertical-align: middle;
+  background-size: 100% 100%;
+}
+
+.menu__item_icon_home::before {
+  background: url("images/home-icon.svg") no-repeat 0 center;
+}
+
+.menu__item_icon_home.menu__item_active::before {
+  background: url("images/home-icon-active.svg") no-repeat 0 center;
+}
+
+.menu__item_icon_history::before {
+  background: url("images/history-icon.svg") no-repeat 0 center;
+}
+
+.menu__item_icon_history.menu__item_active::before {
+  background: url("images/history-icon-active.svg") no-repeat 0 center;
+}
+
+.menu__item_icon_about::before {
+  background: url("images/about-icon.svg") no-repeat 0 center;
+}
+
+.menu__item_icon_about.menu__item_active::before {
+  background: url("images/about-icon-active.svg") no-repeat 0 center;
+}
+
+@media (max-width: 665px) {
+  .header {
+    background: #161b30;
+  }
+
+  .header::after {
+    display: none;
+  }
+
+  .header__menu {
+    position: fixed;
+    bottom: 0;
+    background: #2a2f45;
+    height: 57px;
+  }
+
+  .menu {
+    width: 100vw;
+    max-width: none;
+    /* height: 57px; */
+  }
+
+  .menu__item {
+    padding-top: 19px;
+    padding-bottom: 18px;
+  }
+
+  .menu__item_icon::before {
+    width: 20px;
+    height: 20px;
+    padding-right: 0;
+  }
+
+  .menu__item::after {
+    content: "";
+    display: block;
+    position: relative;
+    float: right;
+
+    width: 2px;
+    height: 24px;
+    margin-top: -2px;
+    background: #494f68;
+  }
+
+  .menu__item-text {
+    display: none;
+  }
+}
+
+.main {
+  min-height: calc(100vh - 65px);
+  padding: 100px 0 20px 0;
+  background-color: #161b30;
+  box-sizing: border-box;
+}
+
+.main__search-form {
+  margin: 0 auto 55px;
+}
+
+.main__text,
+.main__feature-list {
+  width: 470px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.main__feature-list li {
+  margin-top: 24px;
+  margin-right: 16px;
+  width: calc(470px - 16px);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.main__text_big {
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.search-form {
+  display: block;
+  width: 510px;
+  height: 56px;
+}
+
+.search-form__input {
+  background: #2a2f45;
+  width: 510px;
+  height: 56px;
+  padding-left: 20px;
+  border-radius: 2px;
+
+  font-size: 16px;
+  line-height: 19px;
+  color: #8a91ab;
+  border: none;
+}
+
+.cities-list {
+  max-width: 880px;
+  list-style: none;
+  margin: 0 auto 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cities-list::after {
+  content: "";
+  width: 270px;
+}
+
+.cities-list__item {
+  display: block;
+  width: 270px;
+  height: 190px;
+  margin-bottom: 30px;
+  background-color: rgba(41, 46, 68, 0.5);
+  border-radius: 6px;
+
+  color: #fff;
+  text-align: center;
+}
+
+.cities-list__city {
+  margin-top: 23px;
+}
+
+.cities-list__temp {
+  margin-top: 12px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 110.7%;
+}
+
+.cities-list__item img {
+  width: 88px;
+  height: 88px;
+}
+
+.footer {
+  display: block;
+  height: 65px;
+  padding: 24px;
+  background-color: #161b30;
+  color: #8a91ab;
+  text-align: center;
+  box-sizing: border-box;
+}
