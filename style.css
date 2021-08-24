@@ -164,6 +164,10 @@ body, /* сброс отступов по-умолчанию*/
   font-weight: 600;
   line-height: 144px;
   vertical-align: middle;
+
+  background: linear-gradient(180deg, #FFFFFF 11.65%, rgba(255, 255, 255, 0) 139.47%);
+  background-clip: text;
+  color: rgba(255, 255, 255, 0.01);
 }
 
 .city__temp img {
