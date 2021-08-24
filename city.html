@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header header_mobile_hidden">
+      <a
+        href="index.html"
+        class="header__logo"
+        title="WeatherCheck - Главная"
+      ></a>
+      <nav class="menu header__menu">
+        <a
+          class="menu__item menu__item_icon menu__item_icon_home"
+          href="index.html"
+        >
+          <span class="menu__item-text">Главная</span>
+        </a>
+        <a
+          class="
+            menu__item menu__item_icon menu__item_icon_history menu__item_active
+          "
+          href="history.html"
+        >
+          <span class="menu__item-text">История</span>
+        </a>
+        <a
+          class="menu__item menu__item_icon menu__item_icon_about"
+          href="about.html"
+        >
+          <span class="menu__item-text">О приложении</span>
+        </a>
+      </nav>
+    </header>
+    <main class="main">
+      <a href="index.html" class="main__backarrow"></a>
+      <div class="city main__city">
+        <div class="city__name">Москва</div>
+        <div class="city__weather">Облачно с прояснениями</div>
+        <div class="city__temp">
+          <span>-13°</span>
+          <img src="images/weather/Sun cloud mid rain.svg" />
+        </div>
+        <div class="city__barometer"><span>756 мм рт. ст.</span></div>
+        <div class="city__daybreak">Закат в 18:00</div>
+      </div>
+      <footer class="main__footer">Сделано в Nutnet, 2021</footer>
+    </main>
+  </body>
+</html>
