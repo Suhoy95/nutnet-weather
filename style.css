@@ -57,6 +57,10 @@ body, /* сброс отступов по-умолчанию*/
   white-space: nowrap;
 }
 
+.menu__item-text {
+  vertical-align: middle;
+}
+
 .menu__item_active {
   color: #ffffff;
 }
@@ -151,7 +155,6 @@ body, /* сброс отступов по-умолчанию*/
 
 .cities-list {
   max-width: 880px;
-  list-style: none;
   margin: 0 20px 0;
   display: flex;
   flex-wrap: wrap;
@@ -161,18 +164,18 @@ body, /* сброс отступов по-умолчанию*/
 .cities-list::after {
   content: "";
   min-width: 130px;
-  width: calc( (100% - 40px) / 3 );
+  width: calc((100% - 40px) / 3);
   max-width: 270px;
 }
 
 .cities-list__item {
   display: block;
   min-width: 130px;
-  width: calc( (100% - 40px) / 3 );
+  width: calc((100% - 40px) / 3);
   max-width: 270px;
   height: 190px;
   /* margin-right: 5px; */
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   background-color: rgba(41, 46, 68, 0.5);
   border-radius: 6px;
 
@@ -197,7 +200,66 @@ body, /* сброс отступов по-умолчанию*/
   height: 88px;
 }
 
-.footer {
+.history-list {
+  width: calc(100vw - 100px);
+  max-width: 1050px;
+  margin: 0 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.history-list__item {
+  display: block;
+  min-width: 130px;
+  width: calc((100% - 60px) / 3);
+  height: 71px;
+  padding: 16px;
+  margin-bottom: 30px;
+  background-color: rgba(41, 46, 68, 0.5);
+  border-radius: 6px;
+  box-sizing: border-box;
+
+  color: #fff;
+  text-decoration: none;
+
+  position: relative; /* что-бы выставить температуру абсолютно */
+}
+
+.history-list__time {
+  font-size: 14px;
+  line-height: 110.7%;
+}
+
+.history-list__city {
+  padding-top: 6px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 110.7%;
+  white-space: nowrap;
+}
+
+.history-list__temp {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 110.7%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 22px 16px 22px 0;
+  height: 71px;
+  box-sizing: border-box;
+}
+
+.history-list::after {
+  content: "";
+  display: block;
+  min-width: 130px;
+  width: calc((100% - 30px) / 3);
+  visibility: hidden;
+}
+
+.main__footer {
   display: block;
   height: 65px;
   padding: 10px 24px;
@@ -206,7 +268,6 @@ body, /* сброс отступов по-умолчанию*/
   text-align: center;
   box-sizing: border-box;
 }
-
 
 @media (max-width: 665px) {
   .header {
@@ -258,6 +319,20 @@ body, /* сброс отступов по-умолчанию*/
   }
 
   .cities-list__item {
-    width: calc( (100vw - 60px) / 2 );
-  }  
+    width: calc((100vw - 60px) / 2);
+  }
+
+  .history-list {
+    width: calc(100vw - 40px);
+  }
+
+  .history-list__item {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 16px;
+  }
+
+  .main__footer {
+    visibility: hidden;
+  }
 }
