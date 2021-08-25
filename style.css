@@ -510,9 +510,16 @@ body, /* сброс отступов по-умолчанию*/
     width: 206px;
     margin: -32px auto;
   }
+
+  .city__barometer span {
+    font-size: 14px;
+    line-height: 15.5px;
+  }
   
-  .city__barometer {
-    margin-bottom: 40px;
+  .city__barometer::before {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
   }
 
   .main__text_big {
