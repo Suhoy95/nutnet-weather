@@ -1,0 +1,35 @@
+{
+  "name": "nutnet-weather",
+  "version": "1.0.0",
+  "description": "Тестовое задание в Nutnet, 2021",
+  "main": "src/index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "webpack --mode production",
+    "watch": "webpack --mode development -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Suhoy95/nutnet-weather.git"
+  },
+  "author": "Сухоплюев Илья",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Suhoy95/nutnet-weather/issues"
+  },
+  "homepage": "https://github.com/Suhoy95/nutnet-weather#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-webpack-plugin": "^3.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
