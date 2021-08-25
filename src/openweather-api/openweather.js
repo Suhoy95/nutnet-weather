@@ -4,7 +4,7 @@ import key from "./api-key"
 // https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2
 const idsToIcons = {
   "01d": "/images/weather/Sun-cloud-mid-rain.png", // нужна иконка с Солнцем
-  "01n": "/images/weather/Moon-fast-wind.svg", // нужна иконка с Луной
+  "01n": "/images/weather/Moon-fast-wind.png", // нужна иконка с Луной
   "02d": "/images/weather/Sun-cloud-little-rain.png", // нужны иконки просто с облаками
   "02n": "/images/weather/Moon-cloud-fast-wind.png", // нужны иконки просто с облаками
   "03d": "/images/weather/Sun-cloud-little-rain.png", // нужны иконки просто с облаками
