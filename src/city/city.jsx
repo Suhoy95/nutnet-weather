@@ -7,6 +7,7 @@ import {
 
 
 import getWeatherByCityName from "../openweather-api/openweather";
+import HistoryStorage from "../history-storage";
 class City extends React.Component {
 
   constructor(props) {
@@ -27,7 +28,10 @@ class City extends React.Component {
 
   componentDidMount() {
     getWeatherByCityName(this.city)
-      .then((data) => this.setState(data))
+      .then((data) => {
+        HistoryStorage.pushCityToHistory(data);
+        this.setState(data);
+      })
   }
 
   render() {
