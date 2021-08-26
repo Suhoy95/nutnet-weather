@@ -10,7 +10,7 @@ import {
 import Menu from "../Menu/Menu";
 
 import SearchForm from "../SearchForm/SearchForm";
-// import CitiesList from "./cities-list/cities-list";
+import CitiesList from "../CitiesList/CitiesList";
 import HistoryList from "../HistoryList/HistoryList";
 import About from "../About/About"
 // import City from "./city/city";
@@ -36,7 +36,7 @@ export default function WeatherCheckApp() {
           <Switch>
             <Route exact path="/">
               <SearchForm />
-              {/* <CitiesList /> */}
+              <CitiesList />
             </Route>
             <Route path="/history">
               <HistoryList />
