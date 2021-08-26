@@ -1,0 +1,145 @@
+.City {
+  width: 100%;
+  padding-top: 76px;
+  background: radial-gradient(
+    80.36% 80.36% at 50% 0%,
+    #5a607c 0%,
+    #161b30 100%
+  );
+
+  color: white;
+  text-align: center;
+}
+
+.City-backarrow {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: url("backicon.svg") no-repeat center center;
+  background-size: 9.9px 16.97px;
+}
+
+.City-name {
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 62px;
+  margin-bottom: 16px;
+}
+
+.City-weather {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 15px;
+  margin-bottom: 16px;
+}
+
+.City-temp {
+  margin-bottom: 40px;
+}
+
+.City-temp span {
+  display: inline-block;
+  font-size: 130px;
+  font-weight: 600;
+  line-height: 144px;
+  vertical-align: middle;
+
+  /* background: linear-gradient(180deg, #FFFFFF 11.65%, rgba(255, 255, 255, 0) 139.47%);
+  -webkit-background-clip: text; 
+  background-clip: text;
+  color: rgba(255, 255, 255, 0.01); */
+}
+
+.City-temp img {
+  display: inline-block;
+  height: 218.58px;
+  width: 218.58px;
+  vertical-align: middle;
+}
+
+.City-barometer {
+  margin-bottom: 40px;
+}
+
+.City-barometer span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.City-barometer::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("barometer.svg") no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin-right: 9.2px;
+}
+
+.City-daybreak {
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(138, 145, 171, 1);
+}
+
+@media (max-width: 665px) {
+  
+  .City {
+    background: linear-gradient(180deg, #5a607c 0%, #161b30 49.93%);
+  }
+
+  .Cain-backarrow {
+    display: block;
+  }
+  .City {
+    padding-top: 92px;
+  }
+
+  .City-name {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 27px;
+    margin-bottom: 14px;
+  }
+
+  .City-weather {
+    font-size: 14px;
+    line-height: 15px;
+    margin-bottom: 16px;
+  }
+
+  .City-temp {
+    margin-bottom: 21px;
+  }
+
+  .City-temp span {
+    display: block;
+    font-size: 120px;
+    font-weight: 600;
+    line-height: 133px;
+  }
+
+  .City-temp img {
+    display: block;
+    height: 206px;
+    width: 206px;
+    margin: -32px auto;
+  }
+
+  .City-barometer span {
+    font-size: 14px;
+    line-height: 15.5px;
+  }
+
+  .City-barometer::before {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+}

@@ -13,7 +13,7 @@ import SearchForm from "../SearchForm/SearchForm";
 import CitiesList from "../CitiesList/CitiesList";
 import HistoryList from "../HistoryList/HistoryList";
 import About from "../About/About"
-// import City from "./city/city";
+import City from "../City/City";
 
 import { cn } from "@bem-react/classname"
 import "./WeatherCheckApp.css"
@@ -44,9 +44,9 @@ export default function WeatherCheckApp() {
             <Route path="/about">
               <About />
             </Route>
-            {/* <Route path="/city/:name">
+            <Route path="/city/:name">
               <City />
-            </Route> */}
+            </Route>
           </Switch>
         </main>
         <footer className={cnWeatherCheckApp("footer")}>
