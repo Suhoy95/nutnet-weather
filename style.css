@@ -1,75 +1,9 @@
-.header::after {
-  content: "";
-  visibility: hidden;
-  width: 194px;
-}
-
 .header__menu {
   display: block;
   height: 65px;
   flex-grow: 2;
   text-align: center;
   z-index: 1000;
-}
-
-.menu {
-  display: flex;
-  max-width: 420px;
-  justify-content: stretch;
-}
-
-.menu__item {
-  display: block;
-  flex-grow: 1;
-  height: 100%;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  box-sizing: border-box;
-  text-decoration: none;
-  color: #8a91ab;
-  white-space: nowrap;
-}
-
-.menu__item-text {
-  vertical-align: middle;
-}
-
-.menu__item_active {
-  color: #ffffff;
-}
-
-.menu__item_icon::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 17px;
-  padding-right: 10px;
-  vertical-align: middle;
-  background-size: 100% 100%;
-}
-
-.menu__item_icon_home::before {
-  background: url("images/home-icon.svg") no-repeat 0 center;
-}
-
-.menu__item_icon_home.menu__item_active::before {
-  background: url("images/home-icon-active.svg") no-repeat 0 center;
-}
-
-.menu__item_icon_history::before {
-  background: url("images/history-icon.svg") no-repeat 0 center;
-}
-
-.menu__item_icon_history.menu__item_active::before {
-  background: url("images/history-icon-active.svg") no-repeat 0 center;
-}
-
-.menu__item_icon_about::before {
-  background: url("images/about-icon.svg") no-repeat 0 center;
-}
-
-.menu__item_icon_about.menu__item_active::before {
-  background: url("images/about-icon-active.svg") no-repeat 0 center;
 }
 
 .main__search-form {
@@ -351,50 +285,6 @@
   }
 
   .header_mobile_hidden .header__logo {
-    display: none;
-  }
-
-  .header::after {
-    display: none;
-  }
-
-  .header__menu {
-    position: fixed;
-    bottom: 0;
-    background: #2a2f45;
-    height: 57px;
-  }
-
-  .menu {
-    width: 100vw;
-    max-width: none;
-    /* height: 57px; */
-  }
-
-  .menu__item {
-    padding-top: 19px;
-    padding-bottom: 18px;
-  }
-
-  .menu__item_icon::before {
-    width: 20px;
-    height: 20px;
-    padding-right: 0;
-  }
-
-  .menu__item:not(:last-child)::after {
-    content: "";
-    display: block;
-    position: relative;
-    float: right;
-
-    width: 2px;
-    height: 24px;
-    margin-top: -2px;
-    background: #494f68;
-  }
-
-  .menu__item-text {
     display: none;
   }
 

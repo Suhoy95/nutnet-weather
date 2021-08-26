@@ -19,6 +19,13 @@
   background-color: #2a2f45;
 }
 
+/* Псевдо-элемент в противоположность логотипу, чтобы внутреннее меню было по-центру */
+.WeatherCheckApp-header::after {
+  content: "";
+  visibility: hidden;
+  width: 194px;
+}
+
 .WeatherCheckApp-main {
   display: flex;
   flex-direction: column;
@@ -41,6 +48,10 @@
 
   .WeatherCheckApp-header {
     background: none;
+  }
+
+  .WeatherCheckApp-header::after {
+    display: none;
   }
 
   .WeatherCheckApp-footer {

@@ -6,8 +6,7 @@ import {
 } from "react-router-dom";
 
 import WeatherCheckLogo from "./components/WeatherCheckLogo/WeatherCheckLogo";
-
-// import Menu from "./menu/menu";
+import Menu from "./components/Menu/Menu";
 
 // import SearchForm from "./search-form/search-form";
 // import CitiesList from "./cities-list/cities-list";
@@ -26,7 +25,7 @@ export default function WeatherCheckApp() {
       <div className={cnWeatherCheckApp()}>
         <header className={cnWeatherCheckApp("header")}>
           <WeatherCheckLogo />
-          {/* <Menu /> */}
+          <Menu />
         </header>
         <main className={cnWeatherCheckApp("main")}>
           {/* <Switch>

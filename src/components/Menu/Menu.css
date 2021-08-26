@@ -1,0 +1,102 @@
+.Menu {
+  display: flex;
+  width: 100vw;
+  max-width: 420px;
+  justify-content: stretch;
+}
+
+.Menu-item {
+  display: block;
+  flex-grow: 1;
+  height: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  box-sizing: border-box;
+
+  text-align: center;
+  text-decoration: none;
+  color: #8a91ab;
+  white-space: nowrap;
+}
+
+.Menu-item_active {
+  color: #ffffff;
+}
+
+.Menu-item::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 17px;
+  padding-right: 10px;
+  vertical-align: middle;
+  background-size: 100% 100%;
+}
+
+.Menu-item_icon_home::before {
+  background: url("home-icon.svg") no-repeat 0 center;
+}
+
+.Menu-item_icon_home.Menu-item_active::before {
+  background: url("home-icon-active.svg") no-repeat 0 center;
+}
+
+.Menu-item_icon_history::before {
+  background: url("history-icon.svg") no-repeat 0 center;
+}
+
+.Menu-item_icon_history.Menu-item_active::before {
+  background: url("history-icon-active.svg") no-repeat 0 center;
+}
+
+.Menu-item_icon_about::before {
+  background: url("about-icon.svg") no-repeat 0 center;
+}
+
+.Menu-item_icon_about.Menu-item_active::before {
+  background: url("about-icon-active.svg") no-repeat 0 center;
+}
+
+.Menu-itemText {
+  vertical-align: middle;
+}
+
+@media (max-width: 665px) {
+  .Menu {
+    position: fixed;
+    bottom: 0;
+    background: #2a2f45;
+    height: 57px;
+  }
+
+  .Menu {
+    max-width: none;
+  }
+
+  .Menu-item {
+    padding-top: 19px;
+    padding-bottom: 18px;
+  }
+
+  .Menu-item::before {
+    width: 20px;
+    height: 20px;
+    padding-right: 0;
+  }
+
+  .Menu-item:not(:last-child)::after {
+    content: "";
+    display: block;
+    position: relative;
+    float: right;
+
+    width: 2px;
+    height: 24px;
+    margin-top: -2px;
+    background: #494f68;
+  }
+
+  .Menu-itemText {
+    display: none;
+  }
+}
