@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-import WeatherCheckApp from "./WeatherCheckApp"
+import WeatherCheckApp from "./components/WeatherCheckApp/WeatherCheckApp"
 
 ReactDOM.render(
   <WeatherCheckApp />,

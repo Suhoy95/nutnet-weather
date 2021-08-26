@@ -3,10 +3,11 @@ import {
   HashRouter,
   // Switch,
   // Route,
+  Link,
 } from "react-router-dom";
 
-import WeatherCheckLogo from "./components/WeatherCheckLogo/WeatherCheckLogo";
-import Menu from "./components/Menu/Menu";
+
+import Menu from "../Menu/Menu";
 
 // import SearchForm from "./search-form/search-form";
 // import CitiesList from "./cities-list/cities-list";
@@ -24,7 +25,11 @@ export default function WeatherCheckApp() {
     <HashRouter>
       <div className={cnWeatherCheckApp()}>
         <header className={cnWeatherCheckApp("header")}>
-          <WeatherCheckLogo />
+          <Link
+            to="/"
+            className={cnWeatherCheckApp("logo")}
+            title="WeatherCheck - Главная"
+          ></Link>
           <Menu />
         </header>
         <main className={cnWeatherCheckApp("main")}>
