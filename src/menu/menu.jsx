@@ -1,31 +1,34 @@
 import React from "react"
 import {
-  Link,
+  NavLink,
 } from "react-router-dom";
 
 export default function Menu() {
   return (
     <nav className="menu header__menu">
-      <Link
+      <NavLink
         className="
-              menu__item menu__item_icon menu__item_icon_home menu__item_active
+              menu__item menu__item_icon menu__item_icon_home
             "
-        to="/"
+        activeClassName="menu__item_active"
+        exact to="/"
       >
         <span className="menu__item-text">Главная</span>
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         className="menu__item menu__item_icon menu__item_icon_history"
+        activeClassName="menu__item_active"
         to="/history"
       >
         <span className="menu__item-text">История</span>
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         className="menu__item menu__item_icon menu__item_icon_about"
+        activeClassName="menu__item_active"
         to="/about"
       >
         <span className="menu__item-text">О приложении</span>
-      </Link>
+      </NavLink>
     </nav>
   );
 }
