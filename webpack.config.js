@@ -23,6 +23,9 @@ module.exports = {
           "plugins": ["transform-async-to-generator"]
         }
       }
+    }, {
+      test: /\.css$/,
+      use: ["style-loader", "css-loader"],
     }]
   },
   resolve: {

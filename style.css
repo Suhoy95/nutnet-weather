@@ -1,22 +1,3 @@
-body, /* сброс отступов по-умолчанию*/
-.header, .main, .footer {
-  font-family: SF Pro Display;
-  font-size: 14px;
-  line-height: 17px;
-  margin: 0;
-  padding: 0;
-  background-color: #161b30;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-
-  width: 100vw;
-  height: 65px;
-  background-color: #2a2f45;
-}
-
 .header__logo {
   display: block;
   width: 194px;
@@ -99,16 +80,6 @@ body, /* сброс отступов по-умолчанию*/
   background: url("images/about-icon-active.svg") no-repeat 0 center;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  min-height: calc(100vh - 65px);
-  background-color: #161b30;
-  box-sizing: border-box;
-}
-
 .main__search-form {
   display: block;
   max-width: 510px;
@@ -121,7 +92,11 @@ body, /* сброс отступов по-умолчанию*/
   align-self: stretch;
   text-align: center;
   flex-grow: 2;
-  background: radial-gradient(80.36% 80.36% at 50% 0%, #5A607C 0%, #161B30 100%);
+  background: radial-gradient(
+    80.36% 80.36% at 50% 0%,
+    #5a607c 0%,
+    #161b30 100%
+  );
 }
 
 .main__backarrow {
@@ -158,7 +133,7 @@ body, /* сброс отступов по-умолчанию*/
   margin-bottom: 40px;
 }
 
-.city__temp span{
+.city__temp span {
   display: inline-block;
   font-size: 130px;
   font-weight: 600;
@@ -257,7 +232,6 @@ body, /* сброс отступов по-умолчанию*/
   line-height: 24px;
   margin-bottom: 28px;
 }
-
 
 .search-form__input {
   background: #2a2f45;
@@ -379,24 +353,7 @@ body, /* сброс отступов по-умолчанию*/
   visibility: hidden;
 }
 
-/* 
-  footer помещен в main что-бы он был в одном flex-потоке, 
-  и масштабировать отступы между содержимым и footer-ом */
-.main__footer { 
-  display: block;
-  height: 65px;
-  padding: 10px 24px;
-  background-color: #161b30;
-  color: #8a91ab;
-  text-align: center;
-  box-sizing: border-box;
-}
-
 @media (max-width: 665px) {
-  .header {
-    background: none;
-  }
-
   .header_mobile_hidden {
     height: 0;
   }
@@ -464,46 +421,41 @@ body, /* сброс отступов по-умолчанию*/
   }
 
   .main__city {
-    background: linear-gradient(180deg, #5A607C 0%, #161B30 49.93%);
+    background: linear-gradient(180deg, #5a607c 0%, #161b30 49.93%);
   }
 
   .main__backarrow {
     display: block;
   }
 
-  .main__footer {
-    visibility: hidden;
-  }
-
-
   .city {
     padding-top: 92px;
   }
-  
+
   .city__name {
     font-size: 24px;
     font-weight: 500;
     line-height: 27px;
     margin-bottom: 14px;
   }
-  
+
   .city__weather {
     font-size: 14px;
     line-height: 15px;
     margin-bottom: 16px;
   }
-  
+
   .city__temp {
     margin-bottom: 21px;
   }
-  
-  .city__temp span{
+
+  .city__temp span {
     display: block;
     font-size: 120px;
     font-weight: 600;
     line-height: 133px;
   }
-  
+
   .city__temp img {
     display: block;
     height: 206px;
@@ -515,7 +467,7 @@ body, /* сброс отступов по-умолчанию*/
     font-size: 14px;
     line-height: 15.5px;
   }
-  
+
   .city__barometer::before {
     width: 24px;
     height: 24px;
