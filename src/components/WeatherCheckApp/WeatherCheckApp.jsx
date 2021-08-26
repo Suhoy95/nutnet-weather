@@ -11,7 +11,7 @@ import Menu from "../Menu/Menu";
 
 // import SearchForm from "./search-form/search-form";
 // import CitiesList from "./cities-list/cities-list";
-// import HistoryList from "./history-list/history-list";
+import HistoryList from "../HistoryList/HistoryList";
 import About from "../About/About"
 // import City from "./city/city";
 
@@ -37,10 +37,10 @@ export default function WeatherCheckApp() {
             {/* <Route exact path="/">
               <SearchForm />
               <CitiesList />
-            </Route>
+            </Route> */}
             <Route path="/history">
               <HistoryList />
-            </Route> */}
+            </Route>
             <Route path="/about">
               <About />
             </Route>
