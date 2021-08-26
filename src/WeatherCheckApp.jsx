@@ -1,18 +1,19 @@
 import React from "react"
 import {
   HashRouter,
-  Switch,
-  Route,
+  // Switch,
+  // Route,
 } from "react-router-dom";
 
+import WeatherCheckLogo from "./components/WeatherCheckLogo/WeatherCheckLogo";
 
-import Menu from "./menu/menu";
+// import Menu from "./menu/menu";
 
-import SearchForm from "./search-form/search-form";
-import CitiesList from "./cities-list/cities-list";
-import HistoryList from "./history-list/history-list";
-import About from "./about/about";
-import City from "./city/city";
+// import SearchForm from "./search-form/search-form";
+// import CitiesList from "./cities-list/cities-list";
+// import HistoryList from "./history-list/history-list";
+// import About from "./about/about";
+// import City from "./city/city";
 
 import { cn } from "@bem-react/classname"
 import "./WeatherCheckApp.css"
@@ -24,6 +25,7 @@ export default function WeatherCheckApp() {
     <HashRouter>
       <div className={cnWeatherCheckApp()}>
         <header className={cnWeatherCheckApp("header")}>
+          <WeatherCheckLogo />
           {/* <Menu /> */}
         </header>
         <main className={cnWeatherCheckApp("main")}>

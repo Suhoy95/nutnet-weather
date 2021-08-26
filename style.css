@@ -1,11 +1,3 @@
-.header__logo {
-  display: block;
-  width: 194px;
-  height: 65px;
-  background: url("images/WeatherCheckLogo.svg");
-  color: white;
-}
-
 .header::after {
   content: "";
   visibility: hidden;
