@@ -30,7 +30,7 @@ export default function WeatherCheckApp() {
             className={cnWeatherCheckApp("logo")}
             title="WeatherCheck - Главная"
           ></Link>
-          <Menu />
+          <Menu className={cnWeatherCheckApp("menu")}/>
         </header>
         <main className={cnWeatherCheckApp("main")}>
           <Switch>

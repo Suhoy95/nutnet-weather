@@ -6,6 +6,7 @@ import {
 
 import "./Menu.css"
 import { cn } from "@bem-react/classname"
+import classnames from "classnames"
 
 const cnMenu = cn("Menu");
 
@@ -27,9 +28,9 @@ MenuItem.propTypes = {
   children: PropTypes.element,
 };
 
-export default function Menu() {
+export default function Menu({ className }) {
   return (
-    <nav className={cnMenu()}>
+    <nav className={classnames(cnMenu(), className)}>
       <MenuItem icon="home" exact to="/">
         Главная
       </MenuItem>
@@ -42,3 +43,7 @@ export default function Menu() {
     </nav>
   )
 }
+
+Menu.propTypes = {
+  className: PropTypes.string,
+};

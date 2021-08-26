@@ -27,6 +27,10 @@
   background-color: #2a2f45;
 }
 
+.WeatherCheckApp-menu {
+  flex-grow: 2;
+}
+
 /* Псевдо-элемент в противоположность логотипу, чтобы внутреннее меню было по-центру */
 .WeatherCheckApp-header::after {
   content: "";
