@@ -6,7 +6,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 module.exports = {
   entry: ["babel-polyfill", "./src/index.jsx"],
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname),
     filename: "nutnet-weather.bundle.js",
   },
   module: {
