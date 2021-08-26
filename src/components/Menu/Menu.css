@@ -3,6 +3,7 @@
   width: 100vw;
   max-width: 420px;
   justify-content: stretch;
+  z-index: 1000;
 }
 
 .Menu-item {

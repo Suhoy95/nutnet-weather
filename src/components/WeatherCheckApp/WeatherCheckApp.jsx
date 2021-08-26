@@ -1,8 +1,8 @@
 import React from "react"
 import {
   HashRouter,
-  // Switch,
-  // Route,
+  Switch,
+  Route,
   Link,
 } from "react-router-dom";
 
@@ -12,7 +12,7 @@ import Menu from "../Menu/Menu";
 // import SearchForm from "./search-form/search-form";
 // import CitiesList from "./cities-list/cities-list";
 // import HistoryList from "./history-list/history-list";
-// import About from "./about/about";
+import About from "../About/About"
 // import City from "./city/city";
 
 import { cn } from "@bem-react/classname"
@@ -33,21 +33,21 @@ export default function WeatherCheckApp() {
           <Menu />
         </header>
         <main className={cnWeatherCheckApp("main")}>
-          {/* <Switch>
-            <Route exact path="/">
+          <Switch>
+            {/* <Route exact path="/">
               <SearchForm />
               <CitiesList />
             </Route>
             <Route path="/history">
               <HistoryList />
-            </Route>
+            </Route> */}
             <Route path="/about">
               <About />
             </Route>
-            <Route path="/city/:name">
+            {/* <Route path="/city/:name">
               <City />
-            </Route>
-          </Switch> */}
+            </Route> */}
+          </Switch>
         </main>
         <footer className={cnWeatherCheckApp("footer")}>
           Сделано в Nutnet, 2021

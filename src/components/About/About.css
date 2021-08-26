@@ -1,0 +1,70 @@
+.About {
+  display: block;
+}
+
+.About,
+.About-featureList {
+  width: calc(100vw - 40px);
+  max-width: 512px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.About-featureList {
+  list-style: none;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+
+.About-featureList li {
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 24px;
+}
+
+.About-featureList li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(73, 79, 104, 1);
+  position: absolute;
+  left: -16px;
+  top: 10px;
+}
+
+.About-bigText {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.About-abilities {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 665px) {
+  .About-bigText {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+
+  .About-abilities {
+    margin-bottom: 24px;
+  }
+
+  .About-featureList li {
+    margin-bottom: 20px;
+  }
+}
