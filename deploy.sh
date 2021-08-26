@@ -8,5 +8,5 @@ scp -r index.html \
   style.css \
   *.bundle.js \
   *.svg \
-  images/ \
+  *.png \
   root@gramend.ru:/srv/nutnet.gramend.ru

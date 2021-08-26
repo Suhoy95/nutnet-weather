@@ -25,7 +25,7 @@ function MenuItem(props) {
 
 MenuItem.propTypes = {
   icon: PropTypes.string,
-  children: PropTypes.element,
+  children: PropTypes.string,
 };
 
 export default function Menu({ className }) {
