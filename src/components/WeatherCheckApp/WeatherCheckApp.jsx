@@ -9,7 +9,7 @@ import {
 
 import Menu from "../Menu/Menu";
 
-// import SearchForm from "./search-form/search-form";
+import SearchForm from "../SearchForm/SearchForm";
 // import CitiesList from "./cities-list/cities-list";
 import HistoryList from "../HistoryList/HistoryList";
 import About from "../About/About"
@@ -34,10 +34,10 @@ export default function WeatherCheckApp() {
         </header>
         <main className={cnWeatherCheckApp("main")}>
           <Switch>
-            {/* <Route exact path="/">
+            <Route exact path="/">
               <SearchForm />
-              <CitiesList />
-            </Route> */}
+              {/* <CitiesList /> */}
+            </Route>
             <Route path="/history">
               <HistoryList />
             </Route>

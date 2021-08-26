@@ -4,6 +4,11 @@ import { Link, withRouter } from "react-router-dom";
 
 import citiesList from "./cities-list"
 
+import "./SearchForm.css"
+import { cn } from "@bem-react/classname"
+
+const cnSearchForm = cn("SearchForm");
+
 class SearchForm extends React.Component {
 
   constructor(props) {
@@ -42,19 +47,23 @@ class SearchForm extends React.Component {
   render() {
     return (
       <form
-        className="search-form main__search-form"
+        className={cnSearchForm()}
         onSubmit={this.onSubmit}>
         <input
-          className="search-form__input"
+          className={cnSearchForm("input")}
           type="text"
           placeholder="Укажите город"
           value={this.value}
           onChange={this.onChange}
         />
-        <div className="search-form__autocomplete">
+        <div className={cnSearchForm("autocomplete")}>
           {
             this.state.autocomplete.map(
-              city => (<Link key={city} to={`/city/${city}`}>{city}</Link>)
+              city => (
+                <Link
+                  className={cnSearchForm("autocompleteItem")}
+                  key={city} to={`/city/${city}`}>{city}</Link>
+              )
             )
           }
         </div>

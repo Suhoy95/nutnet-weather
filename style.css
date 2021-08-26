@@ -1,10 +1,3 @@
-.main__search-form {
-  display: block;
-  max-width: 510px;
-  width: calc(100vw - 40px);
-  margin: 20px;
-  height: 56px;
-}
 
 .main__city {
   align-self: stretch;
@@ -97,20 +90,6 @@
   font-size: 16px;
   line-height: 18px;
   color: rgba(138, 145, 171, 1);
-}
-
-.search-form__input {
-  background: #2a2f45;
-  width: 100%;
-  height: 100%;
-  padding-left: 20px;
-  border-radius: 2px;
-  box-sizing: border-box;
-
-  font-size: 16px;
-  line-height: 19px;
-  color: #8a91ab;
-  border: none;
 }
 
 .cities-list {
