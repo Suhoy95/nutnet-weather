@@ -24,7 +24,7 @@ function HistoryItem({ name, temp, accessDate }) {
 HistoryItem.propTypes = {
   name: PropTypes.string,
   temp: PropTypes.number,
-  accessDate: PropTypes.instanceOf(Date)
+  accessDate: PropTypes.string
 }
 
 export default function HistoryList() {
