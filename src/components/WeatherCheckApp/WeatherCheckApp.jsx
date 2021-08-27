@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
   Link,
+  withRouter,
 } from "react-router-dom";
 
 
@@ -20,18 +21,22 @@ import "./WeatherCheckApp.css"
 
 const cnWeatherCheckApp = cn("WeatherCheckApp");
 
+const Header = withRouter(({ location }) => (
+  <header className={cnWeatherCheckApp("header", {"hidden": location.pathname.startsWith("/city/")})}>
+    <Link
+      to="/"
+      className={cnWeatherCheckApp("logo")}
+      title="WeatherCheck - Главная"
+    ></Link>
+    <Menu className={cnWeatherCheckApp("menu")} />
+  </header>
+));
+
 export default function WeatherCheckApp() {
   return (
     <HashRouter>
       <div className={cnWeatherCheckApp()}>
-        <header className={cnWeatherCheckApp("header")}>
-          <Link
-            to="/"
-            className={cnWeatherCheckApp("logo")}
-            title="WeatherCheck - Главная"
-          ></Link>
-          <Menu className={cnWeatherCheckApp("menu")}/>
-        </header>
+        <Header />
         <main className={cnWeatherCheckApp("main")}>
           <Switch>
             <Route exact path="/">

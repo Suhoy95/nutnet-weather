@@ -66,6 +66,15 @@
     display: none;
   }
 
+  /* На мобилках в экране города мы прячем хидер, а main растягивается на весь экран*/
+  .WeatherCheckApp-header_hidden {
+    height: 0;
+    overflow:hidden;
+  }
+  .WeatherCheckApp-header_hidden + .WeatherCheckApp-main {
+    grid-row: 1 / 3;
+  }
+
   .WeatherCheckApp-footer {
     visibility: hidden;
   }

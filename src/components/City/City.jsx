@@ -26,8 +26,8 @@ class City extends React.Component {
       temp: 0,
       icon: "",
       pressure: 0,
-      sunriseTime: 0,
-      sunsetTime: 0,
+      sunrise: new Date(),
+      sunset: new Date()
     };
   }
 
@@ -40,6 +40,9 @@ class City extends React.Component {
   }
 
   render() {
+    const now = new Date();
+    const {sunrise, sunset} = this.state;
+
     return (
       <div className={cnCity()}>
         <Link to="/" className={cnCity("backarrow")}></Link>
@@ -51,7 +54,11 @@ class City extends React.Component {
         </div>
         <div className={cnCity("barometer")}><span>{this.state.pressure} мм рт. ст.</span></div>
         <div className={cnCity("daybreak")}>
-          Закат в 18:00
+          {
+            now < sunrise || now > sunset ? 
+              `Восход в ${sunrise.toLocaleTimeString("ru", {hour: "2-digit", minute:"2-digit", timeZoneName: "short"})}` :
+              `Закат в ${sunset.toLocaleTimeString("ru", {hour: "2-digit", minute:"2-digit", timeZoneName: "short"})}`
+          }
         </div>
       </div>
     );

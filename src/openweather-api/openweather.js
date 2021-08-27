@@ -59,7 +59,7 @@ async function getWeatherByCityName(city) {
       sunrise: new Date(json.sys.sunrise * 1000),
       sunset: new Date(json.sys.sunset * 1000),
 
-      accessDate: Date.now(),
+      accessDate: new Date(),
     };
   }
 
