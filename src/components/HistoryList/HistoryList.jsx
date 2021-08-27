@@ -11,11 +11,11 @@ import { cn } from "@bem-react/classname"
 
 const cnHistoryList = cn("HistoryList");
 
-function HistoryItem({ name, temp }) {
+function HistoryItem({ name, temp, accessDate }) {
   return (
     <Link className={cnHistoryList("item")} to={`/city/${encodeURI(name)}`}>
       <div className={cnHistoryList("temp")}>{temp}°</div>
-      <time className={cnHistoryList("time")}>21:35</time>
+      <time className={cnHistoryList("time")}>{accessDate}</time>
       <div className={cnHistoryList("name")}>{name}</div>
     </Link>
   );
@@ -24,6 +24,7 @@ function HistoryItem({ name, temp }) {
 HistoryItem.propTypes = {
   name: PropTypes.string,
   temp: PropTypes.number,
+  accessDate: PropTypes.instanceOf(Date)
 }
 
 export default function HistoryList() {

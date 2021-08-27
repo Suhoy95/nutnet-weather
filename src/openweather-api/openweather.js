@@ -59,7 +59,7 @@ async function getWeatherByCityName(city) {
       sunrise: new Date(json.sys.sunrise * 1000),
       sunset: new Date(json.sys.sunset * 1000),
 
-      accessDate: new Date(),
+      accessDate: new Date().toLocaleTimeString("ru", {hour: "2-digit", minute:"2-digit"}),
     };
   }
 

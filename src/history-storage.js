@@ -8,7 +8,14 @@ const HISTORY_LIMIT = 9;
 
 class HistoryStorage {
   constructor() {
-    this.history = JSON.parse(localStorage.getItem('citiesHistory')) || [];
+    const history = JSON.parse(localStorage.getItem('citiesHistory')) || [];
+
+    this.history = history.filter((city) => (
+      typeof city === 'object' && city !== null &&
+      "name" in city &&
+      "temp" in city &&
+      "accessDate" in city
+    ));
   }
 
   pushCityToHistory(city) {

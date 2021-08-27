@@ -5,7 +5,6 @@ set -ex
 npm run publish
 
 scp -r index.html \
-  style.css \
   *.bundle.js \
   *.svg \
   *.png \
