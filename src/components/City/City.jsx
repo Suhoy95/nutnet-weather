@@ -83,7 +83,7 @@ class City extends React.Component {
         <div className={cnCity("weather")}>{this.state.description}</div>
         <div className={cnCity("temp")}>
           <span>{this.state.temp}°</span>
-          <img src={this.state.icon} alt={this.state.description} />
+          <img src={this.state.icon} alt={`Изображение: ${description}`} />
         </div>
         <div className={cnCity("barometer")}><span>{this.state.pressure} мм рт. ст.</span></div>
         <div className={cnCity("daybreak")}>

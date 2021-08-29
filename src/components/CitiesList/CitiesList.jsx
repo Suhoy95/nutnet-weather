@@ -12,10 +12,10 @@ const cnCitiesList = cn("CitiesList")
 
 function City({ name, temp, icon, description }) {
   return (
-    <Link className={cnCitiesList("item")} to={`/city/${encodeURI(name)}`} title={description}>
+    <Link className={cnCitiesList("item")} to={`/city/${encodeURI(name)}`} title={`Страница погоды в ${name}`}>
       <div className={cnCitiesList("itemName")}>{name}</div>
       <div className={cnCitiesList("itemTemp")}>{String(temp)}°</div>
-      <img src={icon} alt={description} />
+      <img src={icon} alt={`Изображение: ${description}`} />
     </Link>
   );
 }

@@ -1,7 +1,8 @@
 {
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended"
   ],
   "env": {
     "browser": true,
@@ -15,5 +16,6 @@
     "react": {
       "version": "detect"
     }
-  }
+  },
+  "plugins": ["jsx-a11y"]
 }
