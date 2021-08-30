@@ -13,7 +13,7 @@ import TornadoIcon from "./weatherIcons/Tornado.png"
 // import ZapsIcon from "./weatherIcons/Zaps.png"
 
 // Сопоставление Иконок из OpenWeather к иконкам из Figm-ы
-// https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2
+// https://openweathermap.org/weather-conditions
 const idsToIcons = {
   "01d": SunCloudLittleRainIcon, // TODO: нужна иконка с Солнцем
   "01n": MoonCloudFatsWindIcon, // TODO: нужна иконка с Луной
