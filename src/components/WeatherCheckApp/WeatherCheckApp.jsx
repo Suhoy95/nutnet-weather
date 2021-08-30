@@ -32,6 +32,10 @@ const Header = withRouter(({ location }) => (
   </header>
 ));
 
+
+// TODO: Добавить обработчик ошибок и логирование в Sentry:
+// https://reactjs.org/docs/error-boundaries.html
+// https://docs.sentry.io/platforms/javascript/
 export default function WeatherCheckApp() {
   return (
     <HashRouter>

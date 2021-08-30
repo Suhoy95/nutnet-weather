@@ -1,5 +1,3 @@
-import key from "./api-key"
-
 import BigRainDropsIcon from "./weatherIcons/Big-rain-drops.png"
 import BigSnowIcon from "./weatherIcons/Big-snow.png"
 import Cloud3ZapIcon from "./weatherIcons/Cloud-3-zap.png"
@@ -39,9 +37,14 @@ const idsToIcons = {
 
 // TODO: Нужно отлавливать ошибки работы с сетью
 async function getWeatherByCityName(city) {
+
+  // TODO: Можно вынести ключ в отдельный бандл-конфиг,
+  // чтобы менять настройки приложения без необходимости пересборки
+  const key = "57c0d2b3df262af2fb4aafea320db748";
+
   const params = [
     `q=${encodeURI(city)}`,
-    `appid=${key.key}`,
+    `appid=${key}`,
     "units=metric",
     "lang=ru",
   ].join('&');
